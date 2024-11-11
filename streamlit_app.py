@@ -25,7 +25,7 @@ if st.button("Agendar"):
             "horario": str(horario)
         }
 
-        # Substitua a URL abaixo pela URL real do backend caso tenha um.
+        # Substituindo a URL pela URL real 
         url_backend = "https://qnpqpfbfe9jf9ttd8accyi.streamlit.app/"
         response = requests.post(url_backend, json=dados)
 
