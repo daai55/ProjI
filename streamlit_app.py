@@ -12,7 +12,7 @@ st.write("Aproveite para agendar seu serviço com comodidade e praticidade.")
 # Divisor visual
 st.markdown("---")
 
-# Formulário de agendamento com layout melhorado
+# Formulário de agendamento
 with st.form(key="form_agendamento"):
     st.subheader("📝 Dados do Agendamento")
     
@@ -53,7 +53,7 @@ with st.form(key="form_agendamento"):
                 "pagamento": pagamento
             }
 
-            # Substitua a URL abaixo pela URL real do backend caso tenha um.
+            # Substituição da URL 
             url_backend = "https://fpghdtrd5gtaxkph8kowdm.streamlit.app/"
             response = requests.post(url_backend, json=dados)
 
@@ -67,5 +67,5 @@ with st.form(key="form_agendamento"):
 # Informações adicionais
 st.markdown("---")
 st.write("#### 📍 Nosso Endereço")
-st.write("Rua do Açougue, 123 - Bairro Centro")
+st.write("Rua Donária de Moraes, 525 - Bairro Centro")
 st.write("Telefone: (11) 1234-5678")
