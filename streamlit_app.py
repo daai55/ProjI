@@ -47,8 +47,8 @@ if st.button("Agendar"):
         response = requests.post(url_backend, json=dados)
 
         if response.status_code == 200:
-            st.success("("Por favor, preencha todos os campos obrigatório.")
+            st.success("Agendamento realizado com sucesso")
         else:
             st.error("Erro ao realizar agendamento. Tente novamente.")
     else:
-        st.warning("Agendamento realizado com sucesso!")
+        st.warning("Por favor, preencha todos os campos obrigatório.")
