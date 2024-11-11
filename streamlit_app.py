@@ -12,7 +12,14 @@ st.write("Aproveite para agendar seu serviço com comodidade e praticidade.")
 # Divisor visual
 st.markdown("---")
 
-# Formulário de agendamento
+# Dicionário com os serviços e seus respectivos preços
+servicos = {
+    "Corte Especial": 15.00,
+    "Moagem de Carne": 10.00,
+    "Embalagem a Vácuo": 12.50
+}
+
+# Formulário de agendamento com layout melhorado
 with st.form(key="form_agendamento"):
     st.subheader("📝 Dados do Agendamento")
     
@@ -20,9 +27,16 @@ with st.form(key="form_agendamento"):
     nome = st.text_input("Nome", placeholder="Digite seu nome completo")
     email = st.text_input("Email", placeholder="Digite seu email")
     
-    # Opções de serviço
-    servico = st.selectbox("Escolha o serviço desejado", ["Corte Especial", "Moagem de Carne", "Embalagem a Vácuo"])
+    # Opções de serviço com preços
+    servico_selecionado = st.selectbox(
+        "Escolha o serviço desejado",
+        [f"{servico} - R${preco:.2f}" for servico, preco in servicos.items()]
+    )
     
+    # Captura apenas o nome do serviço selecionado
+    servico_nome = servico_selecionado.split(" - ")[0]
+    preco_servico = servicos[servico_nome]  # Obtenção do valor do serviço
+
     # Escolha da data e horário
     col1, col2 = st.columns(2)
     with col1:
@@ -38,6 +52,9 @@ with st.form(key="form_agendamento"):
         help="Escolha como deseja realizar o pagamento no momento do serviço."
     )
 
+    # Exibição do valor do serviço selecionado
+    st.write(f"**Valor do serviço selecionado:** R$ {preco_servico:.2f}")
+    
     # Botão de envio com layout centralizado
     submit_button = st.form_submit_button("Agendar")
     if submit_button:
@@ -47,14 +64,15 @@ with st.form(key="form_agendamento"):
             dados = {
                 "nome": nome,
                 "email": email,
-                "servico": servico,
+                "servico": servico_nome,
+                "preco": preco_servico,
                 "data": str(data),
                 "horario": str(horario),
                 "pagamento": pagamento
             }
 
-            # Substituição da URL 
-            url_backend = "https://fpghdtrd5gtaxkph8kowdm.streamlit.app/"
+            # Substitua a URL abaixo pela URL real do backend caso tenha um.
+            url_backend = "http://localhost:5000/agendamentos"
             response = requests.post(url_backend, json=dados)
 
             if response.status_code == 200:
