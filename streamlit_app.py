@@ -1,21 +1,6 @@
 import streamlit as st
 import requests
 
-# Configuração inicial da página com imagem de fundo
-page_bg_img = '''
-<style>
-body {
-    background-image: url("https://www.google.com.br/url?sa=i&url=https%3A%2F%2Fbr.freepik.com%2Ffotos-vetores-gratis%2Fsocial-media-acougue&psig=AOvVaw1YuB3hqj_cry_daVf8w4Iu&ust=1731447470664000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCNj5rdGe1YkDFQAAAAAdAAAAABAE");
-    background-size: cover;
-    color: #ffffff;
-}
-.stApp {
-    background-color: rgba(0, 0, 0, 0.7);  /* Fundo semi-transparente para melhor leitura */
-}
-</style>
-'''
-st.markdown(page_bg_img, unsafe_allow_html=True)
-
 # Configuração da página
 st.set_page_config(page_title="AgendAçougue", page_icon="🥩", layout="centered")
 
