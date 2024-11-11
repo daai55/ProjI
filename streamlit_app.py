@@ -6,7 +6,7 @@ st.set_page_config(page_title="AgendAçougue", page_icon="🥩", layout="centere
 
 # Título estilizado
 st.markdown("<h1 style='text-align: center; color: #FF6347;'>AgendAçougue 🥩</h1>", unsafe_allow_html=True)
-st.write("### Bem-vindo ao sistema de agendamento de serviços do AgendAçougue!")
+st.write("### Bem-vindo ao sistema de agendamento de serviços!")
 st.write("Aproveite para agendar seu serviço com comodidade e praticidade.")
 
 # Divisor visual
