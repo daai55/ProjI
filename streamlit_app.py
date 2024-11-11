@@ -5,7 +5,7 @@ import requests
 page_bg_img = '''
 <style>
 body {
-    background-image: url("https://example.com/sua_imagem_de_fundo.jpg");
+    background-image: url("https://www.google.com.br/url?sa=i&url=https%3A%2F%2Fbr.freepik.com%2Ffotos-vetores-gratis%2Fsocial-media-acougue&psig=AOvVaw1YuB3hqj_cry_daVf8w4Iu&ust=1731447470664000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCNj5rdGe1YkDFQAAAAAdAAAAABAE");
     background-size: cover;
     color: #ffffff;
 }
