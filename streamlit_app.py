@@ -7,7 +7,7 @@ st.set_page_config(page_title="AgendAçougue", page_icon="🥩")
 # Adicionando estilo CSS
 st.markdown("""
     <style>
-    .title {
+     .page_title {
         font-size: 40px;
         color: #4CAF50;
         text-align: center;
