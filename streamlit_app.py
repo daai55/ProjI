@@ -4,6 +4,23 @@ import requests
 # Configuração inicial da página
 st.set_page_config(page_title="AgendAçougue", page_icon="🥩")
 
+# Adicionando estilo CSS
+st.markdown("""
+    <style>
+    .title {
+        font-size: 40px;
+        color: #4CAF50;
+        text-align: center;
+        margin-top: 20px;
+    }
+    .stButton>button {
+        background-color: #4CAF50;
+        color: white;
+        border: None;
+        padding: 10px 20px;
+        border-radius: 5px;
+    }
+
 st.title("AgendAçougue")
 st.write("Bem-vindo ao sistema de agendamento do AgendAçougue!")
 
@@ -30,8 +47,8 @@ if st.button("Agendar"):
         response = requests.post(url_backend, json=dados)
 
         if response.status_code == 200:
-            st.success("Agendamento realizado com sucesso!")
+            st.success("("Por favor, preencha todos os campos obrigatório.")
         else:
             st.error("Erro ao realizar agendamento. Tente novamente.")
     else:
-        st.warning("Por favor, preencha todos os campos obrigatórios.")
+        st.warning("Agendamento realizado com sucesso!")
