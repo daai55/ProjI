@@ -90,7 +90,7 @@ with st.form(key="form_agendamento"):
             }
 
             # Substitua a URL abaixo pela URL real do backend caso tenha um.
-            url_backend = "http://localhost:5000/agendamentos"
+            url_backend = "https://fpghdtrd5gtaxkph8kowdm.streamlit.app/"
             response = requests.post(url_backend, json=dados)
 
             if response.status_code == 200:
