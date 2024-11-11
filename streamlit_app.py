@@ -22,7 +22,7 @@ servicos = {
     "Preparação de Hambúrguer": 18.00
 }
 
-# Formulário de agendamento com layout melhorado
+# Formulário de agendamento 
 with st.form(key="form_agendamento"):
     st.subheader("📝 Dados do Agendamento")
     
@@ -74,7 +74,7 @@ with st.form(key="form_agendamento"):
                 "pagamento": pagamento
             }
 
-            # Substitua a URL abaixo pela URL real do backend caso tenha um.
+            # Substituição da URL real do backend.
             url_backend = "https://fpghdtrd5gtaxkph8kowdm.streamlit.app/"
             response = requests.post(url_backend, json=dados)
 
