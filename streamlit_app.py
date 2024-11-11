@@ -20,6 +20,10 @@ st.markdown("""
         padding: 10px 20px;
         border-radius: 5px;
     }
+     </style>
+""", unsafe_allow_html=True)
+
+st.markdown('<h1 class="title">AgendAçougue</h1>', unsafe_allow_html=True)
 
 st.title("AgendAçougue")
 st.write("Bem-vindo ao sistema de agendamento do AgendAçougue!")
