@@ -88,17 +88,16 @@ with st.form(key="form_agendamento"):
 # Informações adicionais
 st.markdown("---")
 st.write("#### 📍 Nosso Endereço")
-st.write("Rua do Açougue, 123 - Bairro Centro")
+st.write("Rua Donária de Moraes, 525 - Bairro Centro")
 st.write("Telefone: (11) 1234-5678")
 
 # Redes sociais
 st.markdown("---")
 st.markdown("<h3 style='text-align: center;'>Siga-nos nas redes sociais</h3>", unsafe_allow_html=True)
-col1, col2, col3 = st.columns(3)
+col1, col2 = st.columns(2)
 with col1:
     st.markdown("[![Facebook](https://image.similarpng.com/very-thumbnail/2020/06/Facebook-logo-transparent-PNG.png)](https://www.facebook.com)")
 with col2:
     st.markdown("[![Instagram](https://image.similarpng.com/very-thumbnail/2020/06/Instagram-logo-transparent-PNG.png)](https://www.instagram.com)")
-with col3:
-    st.markdown("[![Twitter](https://image.similarpng.com/very-thumbnail/2020/06/Twitter-logo-transparent-PNG.png)](https://www.twitter.com)")
+
 
